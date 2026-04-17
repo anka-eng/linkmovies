@@ -16,12 +16,12 @@
 
   <div class="mfs-hero">
     <div class="mfs-backdrop">
-      <img src="" alt="">
+      <img id="backdropImg" src="" alt="">
       <div class="mfs-backdrop-overlay"></div>
     </div>
     <div class="mfs-hero-inner">
       <div class="mfs-poster">
-        <img src="" alt="">
+        <img id="posterImg" src="" alt="">
       </div>
       <div class="mfs-info">
         <div class="mfs-title">Loading Movie...</div>
@@ -35,13 +35,58 @@
 
   <div class="mfs-content">
     <div class="mfs-content-body">
-      <p>Loading details...</p>
+
+      <!-- 🎬 VIDEO PLAYER -->
+      <iframe id="moviePlayer"
+        width="100%" height="450"
+        frameborder="0"
+        allowfullscreen
+        style="border-radius:12px;">
+      </iframe>
+
+      <!-- 📄 DESCRIPTION -->
+      <p id="movieDesc">Loading details...</p>
+
     </div>
+
     <div style="margin-top:40px; text-align:center;">
-      <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; color:var(--muted); font-size:14px; border:1px solid var(--border); padding:12px 24px; border-radius:12px;">← Back to Home</a>
+      <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; color:var(--muted); font-size:14px; border:1px solid var(--border); padding:12px 24px; border-radius:12px;">
+        ← Back to Home
+      </a>
     </div>
   </div>
 </div>
+
+<script src="assets/js/movies.js"></script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const movieId = params.get("id");
+
+const movie = moviesData.find(m => m.id === movieId);
+
+if (movie) {
+  // Title
+  document.querySelector(".mfs-title").innerText = movie.title;
+  document.querySelector(".mfs-topbar-title").innerText = movie.title;
+
+  // Year
+  document.querySelector(".year").innerText = movie.year;
+
+  // Description
+  document.getElementById("movieDesc").innerText = movie.description;
+
+  // Images
+  document.getElementById("posterImg").src = movie.thumb;
+  document.getElementById("backdropImg").src = movie.thumb;
+
+  // 🎬 VIDEO PLAYER (MOST IMPORTANT)
+  document.getElementById("moviePlayer").src = movie.video;
+}
+</script>
+
+</body>
+</html>
 
 <script src="assets/js/movies.js"></script>
 <script src="assets/js/app.js"></script>
