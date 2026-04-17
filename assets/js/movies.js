@@ -16,16 +16,18 @@
  */
 
 const moviesData = [
+  /* Example Movie (Uncomment and edit to add)
   {
     id: "1",
-    title: "Sample Movie",
+    title: "Your Movie Title",
     year: "2024",
-    thumb: "assets/img/poster.jpg",
-    video: "<iframe src="https://streamtape.com/e/RXg7RQd2Kjud4AV/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>",
+    thumb: "assets/img/your-poster.jpg",
+    video: "assets/vid/your-video.mp4",
     link: "movie.html?id=1",
     category: ["Action", "Drama"],
-    description: "This is a demo movie for testing your website.",
+    description: "Your movie description goes here...",
     hd: true,
     latest: true
   }
+  */
 ];
