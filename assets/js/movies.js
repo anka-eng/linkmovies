@@ -22,7 +22,7 @@ const moviesData = [
     title: "Your Movie Title",
     year: "2024",
     thumb: "assets/img/your-poster.jpg",
-    video: "assets/vid/your-video.mp4",
+    video: "https://streamable.com/dn7lb3",
     link: "movie.html?id=1",
     category: ["Action", "Drama"],
     description: "Your movie description goes here...",
