@@ -311,8 +311,7 @@
   <header id="mf-header">
     <div class="mf-header-top">
       <a class="mf-logo" href="<?php echo home_url(); ?>">
-        <div class="mf-logo-icon">M</div>
-        <span class="mf-logo-text">Movies<span>Fun.in</span></span>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="MoviesFun.in Logo">
       </a>
     </div>
     <div class="mf-search-bar">

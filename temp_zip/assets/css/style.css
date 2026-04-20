@@ -73,15 +73,31 @@ button {
   gap: 8px;
 }
 
-.mf-logo img {
-  height: 54px;
-  width: auto;
-  display: block;
-  transition: transform 0.3s ease;
+.mf-logo-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--grad);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: #000;
+  font-weight: 900;
+  box-shadow: 0 0 16px rgba(245, 197, 24, 0.4);
 }
 
-.mf-logo:hover img {
-  transform: scale(1.05);
+.mf-logo-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.mf-logo-text span {
+  color: var(--accent);
 }
 
 .mf-search-bar {
