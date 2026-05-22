@@ -727,3 +727,32 @@ button {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+/* ── CONTINUOUS MARQUEE ── */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #e50914;
+  color: white;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  animation: scroll-marquee 10s linear infinite;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.marquee-content span {
+  padding: 0 10px;
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
