@@ -87,5 +87,17 @@ const moviesData = [
     description: "In a near future where capital crime is on the rise, a detective is accused of a crime he didn't commit and must prove his innocence.",
     hd: true,
     latest: true
+  },
+  {
+    id: "warrior",
+    title: "Warrior",
+    year: "2024",
+    thumb: "assets/img/warrior.webp",
+    video: "https://www.youtube.com/embed/SeWDu1iLDJI",
+    link: "movie.html?id=warrior",
+    category: ["Action", "Drama"],
+    description: "Warrior",
+    hd: true,
+    latest: true
   }
 ];
