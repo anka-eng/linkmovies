@@ -121,9 +121,22 @@ function mfMakeCard(m, type = 'grid') {
 }
 
 function mfRenderHome() {
+  const hindiGrid = $('#mfHindiCards');
   const latestGrid = $('#mfLatestCards');
   const allGrid = $('#mfAllGrid');
+  
+  const hindiSection = hindiGrid ? hindiGrid.closest('.mf-section') : null;
   const latestSection = latestGrid ? latestGrid.closest('.mf-section') : null;
+
+  if (hindiGrid) {
+    const hindiMovies = moviesData.filter(m => m.category && m.category.includes('Hindi Dubbed'));
+    if (hindiMovies.length > 0) {
+      hindiGrid.innerHTML = hindiMovies.map(m => mfMakeCard(m, 'scroll')).join('');
+      if (hindiSection) hindiSection.classList.remove('hidden');
+    } else {
+      if (hindiSection) hindiSection.classList.add('hidden');
+    }
+  }
 
   if (latestGrid) {
     const latestMovies = moviesData.filter(m => m.latest);
